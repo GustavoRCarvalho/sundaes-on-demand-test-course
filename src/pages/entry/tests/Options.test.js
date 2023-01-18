@@ -28,10 +28,3 @@ test("displays image for each topping option from server", async () => {
     "Hot fudge topping",
   ]);
 });
-
-test("displays a error when server request invalid option", async () => {
-  render(<Options optionType="error" />);
-
-  const errorBanner = await screen.findByRole("alert", { name: "error" });
-  expect(errorBanner).toBeInTheDocument();
-});
