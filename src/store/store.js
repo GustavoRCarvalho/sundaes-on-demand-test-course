@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import OrderDetailsSlice from "./OrderDetailsSlice";
+import OrderDetailsSlice from "./orderDetailsSlice";
 
 export default configureStore({
   reducer: { orderDetails: OrderDetailsSlice },

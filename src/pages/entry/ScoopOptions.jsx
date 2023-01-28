@@ -1,6 +1,6 @@
 import Col from "react-bootstrap/Col";
 import { useDispatch } from "react-redux";
-import { updateItemCount } from "../../store/OrderDetailsSlice";
+import { updateItemCount } from "../../store/orderDetailsSlice";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/esm/Row";
 
