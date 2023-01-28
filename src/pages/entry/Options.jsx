@@ -43,7 +43,7 @@ export default function Options({ optionType }) {
       <p>
         {title} Total: {formatCurrency(totals[optionType])}
       </p>
-      <Row>{error ? <AlertBanner /> : optionItems}</Row>;
+      <Row>{error ? <AlertBanner /> : optionItems}</Row>
     </>
   );
 }

@@ -40,6 +40,5 @@ const orderDetailsSlice = createSlice({
   },
 });
 
-export const { updateItemCount, resetOrder, showTotals } =
-  orderDetailsSlice.actions;
+export const { updateItemCount, resetOrder } = orderDetailsSlice.actions;
 export default orderDetailsSlice.reducer;
