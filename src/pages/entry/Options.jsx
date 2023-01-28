@@ -14,12 +14,17 @@ export default function Options({ optionType }) {
   const [error, setError] = useState(false);
 
   useEffect(() => {
+    const controller = new AbortController();
     axios
-      .get(`http://localhost:3030/${optionType}`)
+      .get(`http://localhost:3030/${optionType}`, { signal: controller.signal })
       .then((response) => setItems(response.data))
       .catch((error) => {
-        setError(true);
+        if (error.name !== "CanceledError") setError(true);
       });
+
+    return () => {
+      controller.abort();
+    };
   }, [optionType]);
 
   const ItemComponent = optionType === "scoops" ? ScoopOption : ToppingOptions;
